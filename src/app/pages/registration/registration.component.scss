@@ -1,0 +1,88 @@
+@import "src/assets/styles/vars";
+
+
+.registration {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+
+  height: 100vh;
+
+  position: relative;
+
+  &_inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+  }
+
+  &_have {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+  }
+
+  &_title {
+    color: $custom-main-color;
+  }
+
+  &_left {
+    margin-right: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_right {
+    margin-right: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_btn {
+    margin-top: 10px;
+  }
+
+}
+
+.left {
+  margin-right: 20px;
+}
+
+::ng-deep {
+  .mat-form-field {
+    min-width: 400px;
+  }
+}
+
+@media (max-width: 820px) {
+  .registration_left {
+    flex-direction: column;
+  }
+
+  .registration_right {
+    flex-direction: column;
+  }
+
+  .left {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  ::ng-deep {
+    .mat-form-field {
+      min-width: 200px;
+    }
+  }
+
+  .registration_input {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,30 @@
+<div class="header">
+  <div class="header_inner">
+    <div class="header_left">
+      <h1
+        class="header_home text link"
+        [routerLink]="'/home'"
+      >Home</h1>
+    </div>
+    <div class="header_middle">
+      <h1
+        class="header_battle text link"
+        [routerLink]="'/battle'"
+      >Battle</h1>
+    </div>
+    <div class="header_right">
+      <p
+        class="header_nickname text"
+        [routerLink]="'/user'"
+      >User name: {{authUser['userName']}}
+      </p>
+      <div class="header_btn">
+        <app-button
+          [buttonColor]="'small'"
+          [buttonText]="'Logout'"
+          (click)="logout()"
+        ></app-button>
+      </div>
+    </div>
+  </div>
+</div>

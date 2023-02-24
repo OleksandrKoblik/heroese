@@ -1,0 +1,8 @@
+<div
+  class="letters"
+  *ngFor=" let letter of arrLetters">
+  <div
+    class="letters_item"
+    (click)="searchOnLetter(letter)"
+  >{{letter}}</div>
+</div>

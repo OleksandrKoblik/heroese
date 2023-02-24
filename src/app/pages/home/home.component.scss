@@ -1,0 +1,96 @@
+@import "src/assets/styles/vars";
+
+
+.home {
+  margin: 20px;
+
+  &_inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    margin-top: 2rem;
+  }
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+
+  &_wrapper {
+    display: flex;
+    width: 100%;
+  }
+
+  &_img {
+    max-width: 45px;
+    max-height: 45px;
+
+    cursor: pointer;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+app-input {
+  width: 100%;
+}
+
+.lettersBox{
+  width: 585px;
+  margin: 0 auto;
+
+  &_items{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5px;
+  }
+}
+
+.btn_letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45.5px;
+    height: 45.5px;
+    border: 1px solid $custom-main-color;
+    color: $custom-main-color;
+    cursor: pointer;
+    transition: all .2s linear;
+    margin-right: 10px;
+}
+
+.btn_letter:hover {
+    background: $custom-letter-color;
+    transition: all .2s linear;
+    transform: scale(1.3);
+}
+
+::ng-deep {
+  .mat-form-field {
+    width: 100%;
+  }
+}
+
+@media (max-width: 615px) {
+  .lettersBox {
+    width: 100%;
+    margin: 20px;
+  }
+}
+
+

@@ -1,0 +1,41 @@
+@import "src/assets/styles/vars";
+
+.hero {
+
+  &_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 50px;
+  }
+
+  &_description {
+    margin-left: 20px;
+  }
+
+  &_img {
+    max-width: 400px;
+    max-height: 600px;
+    border-radius: 40px;
+  }
+
+  &_name {
+    color: $custom-main-color;
+    margin-bottom: 40px;
+  }
+
+  &_biography {
+    color: $custom-main-color;
+    margin-bottom: 20px;
+  }
+
+  & p {
+    color: $custom-main-color;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  &_btn {
+    margin-top: 30px;
+  }
+}

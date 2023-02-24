@@ -1,0 +1,51 @@
+<div class="battle">
+  <div class="battle_inner">
+    <div class="battle_top">
+      <div class="battle_left">
+        <app-hero-item [hero]="myHero"></app-hero-item>
+      </div>
+      <div class="battle_middle">
+        <ng-container class="result" [ngSwitch]="battleResult.result">
+          <ng-container *ngSwitchCase="'Win'">
+            <div *ngIf="!match">
+              <p class="result_p"> You win</p>
+            </div>
+          </ng-container>
+          <ng-container *ngSwitchCase="'False'">
+            <div *ngIf="!match">
+              <p class="result_p">You lose</p>
+            </div>
+          </ng-container>
+        </ng-container>
+        <h2 class="hero_name hero_name--top">{{ myHero.name }}</h2>
+       <div class="middle_logo">
+         <p
+           class="battle_logo"
+           *ngIf="!match"
+         >VS</p>
+       </div>
+        <mat-spinner
+          class="battle_spinner"
+          *ngIf="match"
+        ></mat-spinner>
+        <h2 class="hero_name hero_name--bottom">{{ enemy.name }}</h2>
+        <p
+          class="battle_start"
+          (click)="battle()"
+        >Battle</p>
+      </div>
+      <div class="battle_right">
+        <app-hero-item
+          (click)="getRandomEnemy()"
+          [hero]="enemy"></app-hero-item>
+      </div>
+    </div>
+    <div class="battle_bottom">
+      <div class="bonus_wrapper">
+        <div *ngFor="let bonus of bonusList">
+          <app-power-ups [bonus]="bonus"></app-power-ups>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="hero">
+  <div class="hero_top">
+    <div class="hero_left">
+      <img
+        class="hero_img"
+        [src]="hero.image?.url"
+        alt="hero_img">
+    </div>
+    <div
+      class="hero_right">
+      <div class="hero_btn">
+        <app-button
+          [buttonColor]="'small'"
+          [buttonText]="'Detail info'"
+          (click)="detailInfo()"
+        ></app-button>
+      </div>
+      <div class="hero_stats">
+        <h2 class="hero_name">{{ hero.name}}</h2>
+        <p class="hero_description">{{ 'Intelligence:' }}
+          <span>{{ hero.powerstats?.intelligence}}</span></p>
+        <p class="hero_description">{{ 'strength:' | titlecase}}
+          <span>{{ hero.powerstats?.strength}}</span></p>
+        <p class="hero_description">{{ 'speed:' | titlecase}}
+          <span>{{ hero.powerstats?.speed}}</span></p>
+        <p class="hero_description">{{ 'durability:' | titlecase}}
+          <span>{{ hero.powerstats?.durability}}</span></p>
+        <p class="hero_description">{{ 'power:' | titlecase}}
+          <span>{{ hero.powerstats?.power}}</span></p>
+        <p class="hero_description">{{ 'combat:' | titlecase}}
+          <span>{{ hero.powerstats?.combat}}</span></p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="hero_bottom">
+    <div class="hero_btn bottom_btn">
+      <app-button
+        [buttonColor]="'small'"
+        [buttonText]="'Select Hero in the collection'"
+        (click)="selectHeroes()"
+      ></app-button>
+    </div>
+    <div class="hero_btn bottom_btn">
+      <app-button
+        [buttonColor]="'small'"
+        [buttonText]="'Select Hero in Battle'"
+        (click)="selectHero()"
+      ></app-button>
+    </div>
+  </div>
+</div>

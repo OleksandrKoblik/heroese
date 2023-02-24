@@ -1,0 +1,30 @@
+<div class="login">
+  <div class="login_input ">
+    <app-input
+      [label]="'Email:'"
+      [inputControl]="loginFormGroup.get('email') | getControl"
+    ></app-input>
+    <app-input
+      (keydown.enter)="login()"
+      [label]="'Password:'"
+      [type]="'password'"
+      [inputControl]="loginFormGroup.get('password') | getControl"
+    ></app-input>
+  </div>
+  <div class="login_btn">
+    <app-button
+      [buttonText]="'login'"
+      [isDisabled]="loginFormGroup.invalid"
+      (click)="login()"
+    ></app-button>
+  </div>
+  <div class="login_text text">
+    <p>If you are not registered, please register</p>
+  </div>
+  <div class="login_btn bottom">
+    <app-button
+      [routerLink]="'/registration'"
+      [buttonText]="'Registration'"
+    ></app-button>
+  </div>
+</div>

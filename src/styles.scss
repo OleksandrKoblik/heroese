@@ -1,0 +1,27 @@
+@import "assets/styles/fonts";
+@import "assets/styles/vars";
+
+body {
+  font-family: 'Permanent Marker', cursive;
+  background: linear-gradient(90deg, rgb(146 0 0 / 88%), rgb(0 0 138 / 88%))
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.text {
+  color: $custom-main-color;
+  text-shadow: 1px 1px 0 #969696, 1px 2px 0 #aba8a8;
+}
+
+
+

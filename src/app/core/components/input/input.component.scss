@@ -1,0 +1,23 @@
+@import "src/assets/styles/vars";
+@import "src/assets/styles/mixins";
+
+
+.mat-hint{
+  color: $custom-main-color;
+}
+
+::ng-deep {
+  .mat-form-field {
+    color: $custom-main-color !important;
+    font-family: $font-base;
+
+  }
+
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: $custom-main-color !important;
+  }
+
+  .mat-form-field-label {
+    color: $custom-main-color !important;
+  }
+}

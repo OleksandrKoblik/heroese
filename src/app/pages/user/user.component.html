@@ -1,0 +1,35 @@
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab
+    label="Heroes list">
+    <div class="hero">
+      <div class="hero_item" *ngFor="let hero of selectedHeroesList">
+        <button
+          (click)="removeHero(hero.id)"
+          class="hero_btn"
+        >X
+        </button>
+        <app-hero-item [hero]="hero"></app-hero-item>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab
+    label="History">
+    <div>
+      <app-history-table></app-history-table>
+    </div>
+  </mat-tab>
+  <mat-tab
+    label="Power Ups">
+    <div class="bonus">
+      <div *ngFor="let bonus of bonusList">
+        <app-power-ups [bonus]="bonus"></app-power-ups>
+      </div>
+    </div>
+    <div class="bonus_btn">
+      <app-button
+        [buttonText]="'Update Power Ups'"
+        (click)="powerUpsUpd()"
+      ></app-button>
+    </div>
+  </mat-tab>
+</mat-tab-group>

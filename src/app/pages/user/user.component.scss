@@ -1,0 +1,56 @@
+@import "src/assets/styles/vars";
+@import "src/assets/styles/mixins";
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  &_item {
+    position: relative;
+  }
+
+  &_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: 1px solid $custom-main-color;
+    border-radius: 50%;
+    color: $custom-main-color;
+    width: 20px;
+    height: 20px;
+    transition: all .2s;
+  }
+
+  &_btn:hover {
+    transform: rotate(360deg);
+    transition: all .2s;
+    background: #9e9e9e;
+  }
+}
+
+.bonus {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 100%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+  &_btn {
+   display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,28 @@
+<div class="hero">
+  <div class="hero_inner">
+    <div>
+      <img
+        class="hero_img"
+        [src]="hero?.image?.url"
+        alt="hero-img">
+    </div>
+    <div class="hero_description">
+      <h1 class="hero_name">{{hero?.name}}</h1>
+      <h2 class="hero_biography">{{ 'biography:' | titlecase}}</h2>
+      <p>{{ 'full-name: ' | titlecase}} <span>{{ hero?.biography['full-name']}}</span></p>
+      <p>{{ 'alter-egos: ' | titlecase}} <span>{{ hero?.biography['alter-egos']}}</span></p>
+      <p>{{ 'aliases: ' | titlecase}} <span>{{ hero?.biography['aliases']}}</span></p>
+      <p>{{ 'place-of-birth: ' | titlecase}} <span>{{ hero?.biography['place-of-birth']}}</span></p>
+      <p>{{ 'first-appearance: ' | titlecase}} <span>{{ hero?.biography['first-appearance']}}</span></p>
+      <p>{{ 'publisher: ' | titlecase}} <span>{{ hero?.biography['publisher']}}</span></p>
+      <p>{{ 'alignment: ' | titlecase}} <span>{{ hero?.biography['alignment']}}</span></p>
+      <p>{{ 'work: ' | titlecase}} <span>{{ hero?.work['occupation']}}</span></p>
+      <div class="hero_btn">
+        <app-button
+          [buttonText]="'Back'"
+          [routerLink]="'/home'"
+        ></app-button>
+      </div>
+    </div>
+  </div>
+</div>

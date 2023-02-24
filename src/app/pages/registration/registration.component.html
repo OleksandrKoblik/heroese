@@ -1,0 +1,46 @@
+<div class="registration">
+    <div class="registration_inner">
+      <div class="registration_have">
+        <p class="registration_title">Already have an account ?</p>
+        <div class="registration_btn">
+          <app-button
+            [routerLink]="'/login'"
+            [buttonText]="'Login'"
+          ></app-button>
+        </div>
+      </div>
+      <p class="registration_title">If you don't have an account, please register </p>
+      <div class="registration_input">
+        <div class="registration_left">
+          <app-input class="left"
+            [inputControl]="registrationFormGroup.get('email') | getControl"
+            [label]="'Email'"
+          ></app-input>
+          <app-input
+            [inputControl]="registrationFormGroup.get('userName') | getControl"
+            [label]="'Your name:'"
+          ></app-input>
+        </div>
+        <div class="registration_right">
+          <app-input class="left"
+            [inputControl]="registrationFormGroup.get('password') | getControl"
+            [label]="'Password:'" [type]="'password'"
+            [message]="'Use letters(A-z), numbers and special symbols'"
+          ></app-input>
+          <app-input
+            (keydown.enter)="registration()"
+            [inputControl]="registrationFormGroup.get('confirmPassword') | getControl"
+            [label]="'Confirm password:'" [type]="'password'"
+            [message]="'Use letters(A-z), numbers and special symbols'"
+          ></app-input>
+        </div>
+      </div>
+      <div class="registration_btn">
+        <app-button
+          [buttonText]="'Registration'"
+          (click)="registration()"
+          [isDisabled]="registrationFormGroup.invalid"
+        ></app-button>
+      </div>
+    </div>
+</div>

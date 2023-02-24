@@ -1,0 +1,47 @@
+@import "src/assets/styles/vars";
+
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+
+
+  height: 100vh;
+
+  position: relative;
+
+  &_input {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &_btn {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+.bottom {
+  margin-bottom: 30px;
+}
+
+
+
+::ng-deep {
+  .mat-form-field {
+    min-width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  ::ng-deep {
+    .mat-form-field {
+      min-width: 200px;
+    }
+  }
+}
+
+

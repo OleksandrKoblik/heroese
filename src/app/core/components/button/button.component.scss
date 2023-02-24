@@ -1,0 +1,9 @@
+@import "src/assets/styles/vars";
+
+.btn_title {
+  font-family: 'Permanent Marker', cursive;
+}
+
+::ng-deep .mat-raised-button {
+  background: $custom-main-color;
+}

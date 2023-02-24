@@ -1,0 +1,48 @@
+@import "src/assets/styles/vars";
+
+
+.header {
+  height: 5rem;
+
+  background: linear-gradient( 90deg, rgb(0 0 138 / 88%), rgb(146 0 0 / 88%));
+  box-shadow: 0 2px 20px 5px $custom-main-color;
+
+  &_inner {
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &_btn {
+    padding-bottom: 5px;
+  }
+
+  &_nickname {
+    cursor: pointer;
+  }
+}
+
+.link {
+  cursor: pointer;
+}
+
+.text {
+  color: $custom-main-color;
+}
+
+
+@media (max-width: 520px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  app-button {
+    max-width: 50px;
+  }
+}

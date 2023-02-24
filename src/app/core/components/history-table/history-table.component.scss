@@ -1,0 +1,21 @@
+@import "src/assets/styles/vars";
+@import "src/assets/styles/mixins";
+
+
+table {
+  width: 100%;
+  margin: 0 auto;
+  font-family: $font-base;
+}
+
+::ng-deep .mat-tab-header{
+  background: transparent;
+}
+
+::ng-deep .mat-table {
+  background: $custom-main-color;
+}
+
+::ng-deep .mat-tab-label-content{
+  color: #FFFFFF;
+}
